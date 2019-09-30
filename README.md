@@ -1,0 +1,2 @@
+# annamations
+Hi! I'm Anna Valladares. I am 15 Years old, and am enrolled at Miami Arts Studio  6-12 @ Zelda Glazer in the Tech Production Magnet.  Ever since I was little, I've been involved in the arts.  From drawing to singing, I was constantly expressing myself in as many ways as I could.  Since the fifth grade, it's been my dream to attend California Institute of the Arts (CalArts for short) and major in animation, and hopefully land a job at Disney's Pixar Animation Studios. 
