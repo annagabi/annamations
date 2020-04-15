@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Site-07-13_2231",
-    "currentPage": "portfolio.html",
+    "currentPage": "aboutme.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -28,7 +28,8 @@
         "isScrollToTopButton": false
       },
       "additionalSetColors": [
-        "#b25eff"
+        "#b25eff",
+        "#e8cfff"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -48,10 +49,15 @@
         "css": "'Quicksand', sans-serif",
         "name": "Quicksand",
         "url": "https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700"
+      },
+      {
+        "css": "'Rubik', sans-serif",
+        "name": "Rubik",
+        "url": "https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i"
       }
     ],
-    "uniqCompNum": 20,
-    "versionPublish": "4.10.15",
+    "uniqCompNum": 21,
+    "versionPublish": "4.12.3",
     "screenshot": "screenshot.png"
   },
   "pages": {
@@ -959,6 +965,7 @@
           "_params": {}
         },
         {
+          "alias": false,
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
@@ -985,12 +992,12 @@
               "width": "100%",
               "height": "100%",
               "background": "@overlayColor",
-              "& when (@gradOverlay)": {
-                "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
-              },
               "opacity": "0",
               "-webkit-transition": "0.2s opacity ease-in-out",
-              "transition": "0.2s opacity ease-in-out"
+              "transition": "0.2s opacity ease-in-out",
+              "& when (@gradOverlay)": {
+                "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
+              }
             },
             ".mbr-gallery-item > div:hover": {
               ".mbr-gallery-title::before": {
@@ -1018,19 +1025,18 @@
                 "z-index": "-1",
                 "position": "absolute",
                 "background": "@overlayColor !important",
-                "& when (@gradOverlay)": {
-                  "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
-                },
                 "opacity": "@overlayOpacity",
                 "-webkit-transition": "0.2s background ease-in-out",
-                "transition": "0.2s background ease-in-out"
+                "transition": "0.2s background ease-in-out",
+                "& when (@gradOverlay)": {
+                  "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
+                }
               }
             }
           },
           "_name": "gallery2",
-          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#554346\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\" checked>\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#ffffff\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-filter></div>\n    </div>\n\n</section>",
-          "_cid": "rwacvpC8c1",
-          "_anchor": "gallery2-5",
+          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#554346\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\" checked>\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#45505b\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#e8cfff\">\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-filter></div>\n    </div>\n\n</section>",
+          "_cid": "rWbFAdzFnR",
           "_protectedParams": [
             "text_all",
             "gallery__filtersTextStyle",
@@ -1045,181 +1051,12 @@
             "gallery__filtersBtnStyle": "btn-primary-outline",
             "gallery": [
               {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/img-1521-1665x1658.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/img-1521-1665x1658-800x797.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-2-2000x1499.png",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-2-2000x1499-800x600.png",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/img-1651-2000x1499.png",
-                "thumb": "@PROJECT_PATH@/assets/images/img-1651-2000x1499-800x600.png",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-5-2000x2668.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-5-2000x2668-800x1067.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-7-2000x1499.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-7-2000x1499-800x600.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-4-2000x1499.png",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-4-2000x1499-800x600.png",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-4-2000x2668.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-4-2000x2668-800x1067.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-8-2000x2668.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-8-2000x2668-800x1067.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Illustrator ",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196-800x478.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Photoshop",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/alyssa-anna-ethan-julius-ceaser-1944x2880.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/alyssa-anna-ethan-julius-ceaser-1944x2880-800x1185.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "InDesign",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/anna-buisness-card-retro-1050x600.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-buisness-card-retro-1050x600-800x457.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "InDesign",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/anna-bi-fold2-2000x1545.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-bi-fold2-2000x1545-800x618.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "InDesign",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-late-1585x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-late-1585x1080-800x545.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Animations",
-                "videoPreview": "@PROJECT_PATH@/assets/images/2019-6-6-23-40-33-542565.jpg",
+                "tags": "Animation",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-21-38-46.jpg",
                 "playVideo": true,
-                "videoUrl": "https://www.youtube.com/watch?v=lDVBvONm6mY",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196-800x478.jpg",
+                "videoUrl": "https://www.youtube.com/watch?v=L0L-5zYYFGk",
+                "image": "@THEME_PATH@/components/_images/background8.jpg",
+                "thumb": "@THEME_PATH@/components/_images/background8.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -1227,77 +1064,12 @@
                 "active": false
               },
               {
-                "tags": "After Effects",
-                "videoPreview": "@PROJECT_PATH@/assets/images/2019-6-0-0-16-18-488717.jpg",
-                "playVideo": true,
-                "videoUrl": "https://www.youtube.com/watch?v=AtfKbhMyAAk",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196-800x478.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "After Effects",
-                "videoPreview": "@PROJECT_PATH@/assets/images/2019-6-0-0-16-54-618371.jpg",
-                "playVideo": true,
-                "videoUrl": "https://www.youtube.com/watch?v=pr6_y-kx4pE",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196-800x478.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "After Effects",
-                "videoPreview": "@PROJECT_PATH@/assets/images/2019-6-0-0-17-22-66484.jpg",
-                "playVideo": true,
-                "videoUrl": "https://www.youtube.com/watch?v=jZxpNLZMxPM",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196-800x478.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "After Effects",
-                "videoPreview": "@PROJECT_PATH@/assets/images/2019-6-0-0-18-23-347935.jpg",
-                "playVideo": true,
-                "videoUrl": "https://www.youtube.com/watch?v=VGKMzCW-pzg",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196-800x478.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "After Effects",
-                "videoPreview": "@PROJECT_PATH@/assets/images/2019-6-0-0-18-59-727550.jpg",
-                "playVideo": true,
-                "videoUrl": "https://www.youtube.com/watch?v=FjApI1j6tK0",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-final-2000x1196-800x478.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Comics",
-                "videoPreview": "@PROJECT_PATH@/assets/images/2019-6-0-0-18-59-727550.jpg",
+                "tags": "Graphic Design",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-21-38-46.jpg",
                 "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=FjApI1j6tK0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-2-2000x1499.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-2-2000x1499-800x600.jpg",
+                "videoUrl": "https://www.youtube.com/watch?v=L0L-5zYYFGk",
+                "image": "@PROJECT_PATH@/assets/images/img-2672.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/img-2672-800x600.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -1305,12 +1077,77 @@
                 "active": false
               },
               {
-                "tags": "Animations",
-                "videoPreview": "@PROJECT_PATH@/assets/images/2019-7-0-15-55-7-850982.jpg",
+                "tags": "Graphic Design",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-21-38-46.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=L0L-5zYYFGk",
+                "image": "@PROJECT_PATH@/assets/images/img-2673.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/img-2673-800x1280.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Graphic Design",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-21-38-46.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=L0L-5zYYFGk",
+                "image": "@PROJECT_PATH@/assets/images/img-2674.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/img-2674-800x600.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Graphic Design",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-21-38-46.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=L0L-5zYYFGk",
+                "image": "@PROJECT_PATH@/assets/images/img-2675.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/img-2675-800x1067.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Graphic Design",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-21-38-46.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=L0L-5zYYFGk",
+                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-4.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-4-800x600.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Graphic Design",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-21-38-46.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=L0L-5zYYFGk",
+                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-2.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-2-800x1067.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Motion Design",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-22-6-28.jpg",
                 "playVideo": true,
-                "videoUrl": "https://www.youtube.com/watch?v=ehT2kmRyeW0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-6-2000x1499.png",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-6-2000x1499-800x600.png",
+                "videoUrl": "https://www.youtube.com/watch?v=NvHxI6ni_o4&t=5s",
+                "image": "@PROJECT_PATH@/assets/images/eya.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/eya-500x500.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -1318,51 +1155,12 @@
                 "active": false
               },
               {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "tags": "Art",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-22-6-28.jpg",
                 "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-3-2000x2668.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-3-2000x2668-800x1067.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-9-2000x1499.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-9-2000x1499-800x600.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Procreate",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-6-2000x1499.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-6-2000x1499-800x600.jpg",
-                "alt": "",
-                "title": "",
-                "customStyle1": "display-7",
-                "caption": "Type caption here",
-                "active": false
-              },
-              {
-                "tags": "Photoshop",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
-                "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-yuh-1500x2400.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-yuh-1500x2400-800x1280.jpg",
+                "videoUrl": "https://www.youtube.com/watch?v=NvHxI6ni_o4&t=5s",
+                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-3.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-3-800x600.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -1370,12 +1168,12 @@
                 "active": true
               },
               {
-                "tags": "Photoshop",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "tags": "Art",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-22-6-28.jpg",
                 "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-1000x1334.png",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-1000x1334-800x1067.png",
+                "videoUrl": "https://www.youtube.com/watch?v=NvHxI6ni_o4&t=5s",
+                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-5.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-5-800x600.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -1383,12 +1181,12 @@
                 "active": false
               },
               {
-                "tags": "Photoshop",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "tags": "Art ",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-22-6-28.jpg",
                 "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-2000x3000.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-2000x3000-800x1200.jpg",
+                "videoUrl": "https://www.youtube.com/watch?v=NvHxI6ni_o4&t=5s",
+                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-6.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-6-800x600.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -1396,12 +1194,51 @@
                 "active": false
               },
               {
-                "tags": "Photoshop",
-                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "tags": "Art",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-22-6-28.jpg",
                 "playVideo": false,
-                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/anna-valladares-we-are-one-1-1334x1000.png",
-                "thumb": "@PROJECT_PATH@/assets/images/anna-valladares-we-are-one-1-1334x1000-800x600.png",
+                "videoUrl": "https://www.youtube.com/watch?v=NvHxI6ni_o4&t=5s",
+                "image": "@PROJECT_PATH@/assets/images/cc4f2f04-9794-4451-b3f7-462ac350e892.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/cc4f2f04-9794-4451-b3f7-462ac350e892-800x1136.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Art",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-22-6-28.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=NvHxI6ni_o4&t=5s",
+                "image": "@PROJECT_PATH@/assets/images/img-3666.png",
+                "thumb": "@PROJECT_PATH@/assets/images/img-3666-800x600.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Art",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-22-6-28.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=NvHxI6ni_o4&t=5s",
+                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-3.png",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-3-800x1067.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false
+              },
+              {
+                "tags": "Art",
+                "videoPreview": "@PROJECT_PATH@/assets/images/mobirise2020314-2128392020-3-2-22-6-28.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=NvHxI6ni_o4&t=5s",
+                "image": "@PROJECT_PATH@/assets/images/untitled-artwork-5-800x1067.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/untitled-artwork-5-800x1067-800x1067.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -1409,7 +1246,8 @@
                 "active": false
               }
             ]
-          }
+          },
+          "_anchor": "gallery2-k"
         }
       ]
     },
@@ -1920,7 +1758,7 @@
             }
           },
           "_name": "header3",
-          "_customHTML": "<section class=\"header3\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"100\">\n        <input type=\"checkbox\" title=\"Media On Left/Right\" name=\"reverseContent\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/untitled-artwork-2000x1499.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#149dcc\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\" checked>\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#000000\" condition=\"gradientBg\">\n        \n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                <img src=\"@PROJECT_PATH@/assets/images/untitled-artwork-5-1014x1353.png\" alt=\"Mobirise\" title>\n            </div>\n\n            <div class=\"media-content\">\n                <h1 class=\"mbr-section-title mbr-white pb-3 mbr-fonts-style\" mbr-if=\"showTitle\" mbr-theme-style=\"display-1\">\n                    About me</h1>\n                <h3 class=\"mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-2\">\n                    Beautiful mobile websites\n                </h3>\n                <div class=\"mbr-section-text mbr-white pb-3 \">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-5\">Hi! I'm Anna Valladares. I am 15 Years old, and am enrolled at Miami Arts Studio \n<br>6-12 @ Zelda Glazer in the Tech Production Magnet.\n<br>Ever since I was little, I've been involved in the arts.\n<br>From drawing to singing, I was constantly expressing myself in as many ways as I could.\n<br>Since the fifth grade, it's been my dream to attend California Institute of the Arts (CalArts for short) and major in animation, and hopefully land a job at Disney's Pixar Animation Studios.\n<br><br></p>\n                </div>\n                <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_customHTML": "<section class=\"header3\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"100\">\n        <input type=\"checkbox\" title=\"Media On Left/Right\" name=\"reverseContent\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/untitled-artwork-2000x1499.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#149dcc\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\" checked>\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#000000\" condition=\"gradientBg\">\n        \n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                <img src=\"@PROJECT_PATH@/assets/images/untitled-artwork-5-1014x1353.png\" alt=\"Mobirise\" title>\n            </div>\n\n            <div class=\"media-content\">\n                <h1 class=\"mbr-section-title mbr-white pb-3 mbr-fonts-style\" mbr-if=\"showTitle\" mbr-theme-style=\"display-1\">\n                    About me</h1>\n                <h3 class=\"mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-2\">\n                    Beautiful mobile websites\n                </h3>\n                <div class=\"mbr-section-text mbr-white pb-3 \">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-5\">Hi! I'm Anna Valladares. I am 16 Years old, and am enrolled at Miami Arts Studio \n<br>6-12 @ Zelda Glazer in the Tech Production Magnet.\n<br>Ever since I was little, I've been involved in the arts.\n<br>From drawing to singing, I was constantly expressing myself in as many ways as I could.\n<br>Since the fifth grade, it's been my dream to attend California Institute of the Arts (CalArts for short) and major in animation, and hopefully land a job at Disney's Pixar Animation Studios.\n<br><br></p>\n                </div>\n                <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
           "_cid": "rwanxXNLlp",
           "_anchor": "header3-a",
           "_protectedParams": [],
